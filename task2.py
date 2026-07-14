@@ -1,10 +1,16 @@
 
-number = [10, 74, 3, 45, 12, 67, 34]
+number = [10, 12, 3, 45, 74, 67, 34]
 
-smallest = number[0]
+bigest = number[0]
+sec_bigest = number[0]
 
 for num in number:
-    if num < smallest:
-        smallest = num
+    if num > bigest:
+        sec_bigest = bigest
+        bigest = num
+        
+    elif bigest > num > sec_bigest :
+        sec_bigest = num
 
-print(smallest)
+print(bigest)
+print(sec_bigest)
